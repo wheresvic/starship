@@ -14,4 +14,4 @@ jobs:
       - name: Setup | Checkout
         uses: actions/checkout@v2.4.0
       - name: Docs | Format
-        uses: dprint/check@v2.0
+        uses: dprint/check@v2.1
