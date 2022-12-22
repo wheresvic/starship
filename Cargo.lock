@@ -219,12 +219,22 @@ dependencies = [
 ]
 
 [[package]]
-name = "clap_complete"
-version = "3.0.4"
+name = "clap"
+version = "4.0.31"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d044e9db8cd0f68191becdeb5246b7462e4cf0c069b19ae00d1bf3fa9889498d"
+checksum = "cab512b39872b48c5ecf6b3bef2efb56dc0b986630d9da71a21a8c8f6878c334"
 dependencies = [
- "clap",
+ "bitflags",
+ "clap_lex",
+]
+
+[[package]]
+name = "clap_complete"
+version = "4.0.7"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "10861370d2ba66b0f5989f83ebf35db6421713fd92351790e7fdd6c36774c56b"
+dependencies = [
+ "clap 4.0.31",
 ]
 
 [[package]]
@@ -238,6 +248,15 @@ dependencies = [
  "proc-macro2",
  "quote",
  "syn",
+]
+
+[[package]]
+name = "clap_lex"
+version = "0.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0d4198f73e42b4936b35b5bb248d81d2b595ecb170da0bac7655c54eedfa8da8"
+dependencies = [
+ "os_str_bytes",
 ]
 
 [[package]]
@@ -1599,7 +1618,7 @@ dependencies = [
  "ansi_term",
  "byte-unit",
  "chrono",
- "clap",
+ "clap 3.0.10",
  "clap_complete",
  "directories-next",
  "gethostname",
